@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "128464427184",
+    "firebase_url": "https://fd-fastdiary.firebaseio.com",
+    "project_id": "fd-fastdiary",
+    "storage_bucket": "fd-fastdiary.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:128464427184:android:a064a259b47d90fc",
+        "android_client_info": {
+          "package_name": "com.fastdiary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "128464427184-s6ptoj9famqu3t3dcp5sbcdavpgje3ob.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCp44q_9U35oB4LJfl97bsgIS2-pztoP5A"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
