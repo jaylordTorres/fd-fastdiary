@@ -19,6 +19,8 @@ const styles = StyleSheet.create({
 	  backgroundColor: 'black',
 	  flex: 1,
 	  resizeMode: 'stretch',
+	  alignContent: 'center',
+	  justifyContent: 'center'
 	}
 });
 

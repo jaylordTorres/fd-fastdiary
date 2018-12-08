@@ -3,7 +3,7 @@ import { View, StatusBar } from 'react-native'
 import AppNavigation from './../navigation/AppNavigation'
 
 // Styles
-import styles from './../../style/RootContainer.style'
+import styles from './../../style/root/RootContainer.style'
 
 class RootContainer extends Component {
   componentDidMount () {
@@ -11,7 +11,7 @@ class RootContainer extends Component {
   }
 
   render () {
-    return (
+    return (  
       <View style={styles.applicationView}>
         <StatusBar barStyle='light-content' />
         <AppNavigation />

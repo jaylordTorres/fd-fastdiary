@@ -4,4 +4,4 @@ export default StyleSheet.create({
   applicationView: {
     flex: 1
   }
-}
+})

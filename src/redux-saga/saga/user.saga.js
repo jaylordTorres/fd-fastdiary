@@ -5,7 +5,7 @@ import UserRedux from '../redux/user.redux'
 export function * loginUser (api, action) {
   const { user, cb = nullFunc } = action
   try {
-
+console.log(user)
   } catch (e) {
 
   }
