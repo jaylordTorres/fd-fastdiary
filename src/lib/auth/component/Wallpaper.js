@@ -1,11 +1,8 @@
 import React from 'react'
-
-import {
-	StyleSheet,
-} from 'react-native'
-import Image from 'react-native-image-progress';
-import Loading from './../../../shared/Loading'
+import { StyleSheet } from 'react-native'
 import { images } from './../../../style/global'
+import Image from 'react-native-image-progress'
+import Loading from './../../../shared/Loading'
 
 const Wallpaper = ({uri, children, style ={}}) => {
 	const image = uri ? {uri} : images.defaultBackground

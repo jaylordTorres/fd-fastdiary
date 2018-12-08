@@ -1,5 +1,3 @@
-'use strict'
-
 import React from 'react';
 import { createStackNavigator, createAppContainer } from "react-navigation"
 import Home from './../auth/screen/Home.screen'
@@ -15,6 +13,6 @@ const AppNavigator = createStackNavigator(
   	headerMode: 'none',
     initialRouteName: "Home"
   }
-);
+)
 
-export default createAppContainer(AppNavigator);
+export default createAppContainer(AppNavigator)

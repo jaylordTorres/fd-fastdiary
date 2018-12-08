@@ -19,8 +19,9 @@ class SignIn extends Component {
     this._onChangeAccessCode = this._onChangeAccessCode.bind(this)
   }
 
-  componentDidMount () {
-  }
+  _onChangeAccessCode = (e) => this.setState({error: false, accessCode: e})
+
+  _onReset = (e) => this.setState({error: false, success: false, accessCode: null})
 
   _login () {
     const { accessCode } = this.state
@@ -29,14 +30,6 @@ class SignIn extends Component {
       return this.setState({error: false, success: true})
     }
     return this.setState({error: true})
-  }
-
-  _onChangeAccessCode (e) {
-    return this.setState({accessCode: e})
-  }
-  _onReset (e) {
-    console.log(e)
-    return this.setState({error: false, success: false, accessCode: null})
   }
 
   render() {
@@ -48,6 +41,7 @@ class SignIn extends Component {
             <Icon active name='lock' />
               <Input placeholder={'Access Code'}
                 onChangeText={this._onChangeAccessCode}
+                onSubmitEditing={this._login}
                 value={this.state.accessCode} />
               <Icon active name='trash' onPress={this._onReset} button />
             </Item>

@@ -6,10 +6,10 @@ import Wallpaper from './../component/Wallpaper'
 
 class Home extends Component {
   constructor(props) {
-    super(props);
+    super(props)
   
     this.state = {
-      background: util.getRandomUri()
+      background: util.getRandomUri(),
     }
     this._login = this._login.bind(this)
     this._next = this._next.bind(this)
@@ -27,17 +27,16 @@ class Home extends Component {
   _next () {
     
     this.setState({
-      background: util.getRandomUri()
+      background: util.getRandomUri(),
     }, ()=> this.props.fetchQuote())
   }
 
   render() {
     const { wallQuote } = this.props
-    console.log( this.props)
     return (
       <Container style={styles.container}>
       <Wallpaper uri={this.state.background}>
-        <Text style={styles.wallQuote}>{ wallQuote }</Text>
+        <Text style={styles.wallQuote}>{wallQuote}</Text>
       </Wallpaper>
         <Footer>
           <FooterTab>
@@ -65,7 +64,7 @@ const styles = StyleSheet.create({
     fontSize: 23,
     textAlign: 'center',
     textShadowColor: 'black',
-    textShadowRadius: 4
+    textShadowRadius: 4,
   }
 });
 
