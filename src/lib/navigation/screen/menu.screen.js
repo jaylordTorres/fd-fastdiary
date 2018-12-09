@@ -8,6 +8,8 @@ import Wallpaper from './../../../shared/Wallpaper'
 const homeMenuItem = [
   'Normal',
   'Gray',
+  'Blur',
+  'GrayBlur',
   'List'
 ]
 

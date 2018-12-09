@@ -47,6 +47,12 @@ export const util = {
   },
   createUriPicsumGray: (w=metrics.width, h=metrics.height, _id) => {
      return `${url.picsum}g/${w}/${h}/?image&${_id}`
+  },
+  createUriPicsumBlur: (w=metrics.width, h=metrics.height, _id) => {
+     return `${url.picsum}${w}/${h}/?image&${_id}&blur`
+  },
+  createUriPicsumGrayBlur: (w=metrics.width, h=metrics.height, _id) => {
+     return `${url.picsum}g/${w}/${h}/?image&${_id}&blur`
   }
 }
 

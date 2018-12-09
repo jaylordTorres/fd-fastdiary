@@ -9,6 +9,8 @@ import SignIn from './../auth/screen/SignIn.screen'
 // Gallery
 import Normal from './../gallery/screen/Normal.screen'
 import Gray from './../gallery/screen/Gray.screen'
+import Blur from './../gallery/screen/Blur.screen'
+import GrayBlur from './../gallery/screen/GrayBlur.screen'
 
 export const { screens, screenList } = screenData([
  	{
@@ -37,6 +39,18 @@ export const { screens, screenList } = screenData([
  		title: 'Gray Design',
  		note: 'swiper',
  		component: Gray,
+ 	},
+ 	{
+ 		id: 'Blur',
+ 		title: 'Blur Design',
+ 		note: 'swiper',
+ 		component: Blur,
+ 	},
+ 	{
+ 		id: 'GrayBlur',
+ 		title: 'Gray Blur Design',
+ 		note: 'swiper',
+ 		component: GrayBlur,
  	},
  	{
  		id: 'List',
