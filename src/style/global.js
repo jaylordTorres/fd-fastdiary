@@ -4,7 +4,11 @@ const { width, height } = Dimensions.get('window')
 
 export const metrics = {
 	width,
-	height
+	height,
+	halfWidth: Math.floor(width/2),
+	halfHeight: Math.floor(height/2),
+	doubleWidth: Math.floor(width * 2),
+	doubleHeight: Math.floor(height * 2),
 }
 
 export const images = {

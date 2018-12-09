@@ -4,11 +4,13 @@ import Api from './../../service/api'
 // type
 import { UserTypes } from '../redux/user.redux'
 import { SettingTypes } from '../redux/setting.redux'
+import { ImageTypes } from '../redux/image.redux'
 import { QuoteTypes } from '../redux/quote.redux'
 
 // saga
 import { loginUser } from './user.saga'
 import { startSetting } from './setting.saga';
+import { fetchImageList } from './image.saga';
 import { fetchQuote } from './qoute.saga';
 
 const api = Api.create()
@@ -19,5 +21,6 @@ export default function * root () {
     takeLatest(UserTypes.LOGIN_USER, loginUser, api),
     takeLatest(SettingTypes.START, startSetting, api),
     takeLatest(QuoteTypes.FETCH_QUOTE, fetchQuote, apiQ),
+    takeLatest(ImageTypes.FETCH_IMAGELIST, fetchImageList, api),
   ])
 }

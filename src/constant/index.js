@@ -4,6 +4,18 @@ export const url = {
 }
 
 export const ACCESS_CODE = {
-	'xYz1234': { name: 'user 1' },
-	'Rmi7x2E': { name: 'user 2' }
+	'xYz1234': { name: 'trail user', code: 'xYz1234' },
+	'Rmi7x2E': { name: 'user 2', code: 'Rmi7x2E' },
+	'x': { name: 'user 3', code: 'x' },
+	get first () {
+		return this.xYz1234
+	}
+}
+
+export const RequestConfig = {
+	MAX_IMAGE_COUNT: 500
+}
+
+export const PicConfig = {
+	PER_PAGE_COUNT: 10, // for not lagging
 }
