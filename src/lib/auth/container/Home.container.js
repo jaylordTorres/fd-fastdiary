@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import { StyleSheet, Image } from 'react-native';
+import React, { Component } from 'react'
 import { Container, Footer, FooterTab, Button, Icon, Text, Title} from 'native-base'
 import { util } from './../../../service/api'
 import Wallpaper from './../component/Wallpaper'
+import styles from './../style'
 
 class Home extends Component {
   constructor(props) {
@@ -10,6 +10,7 @@ class Home extends Component {
   
     this.state = {
       background: util.getRandomUri(),
+      nextCount: 0,
     }
     this._login = this._login.bind(this)
     this._next = this._next.bind(this)
@@ -17,7 +18,6 @@ class Home extends Component {
 
   componentDidMount () {
     this.props.fetchQuote()
-    // this.props.loginUser({s:'jaylord'}, null)
   }
 
   _login() {
@@ -25,10 +25,18 @@ class Home extends Component {
   }
 
   _next () {
-    
-    this.setState({
-      background: util.getRandomUri(),
-    }, ()=> this.props.fetchQuote())
+    this.setState((state) => (
+      {
+        background: util.getRandomUri(),
+        nextCount: ++state.nextCount
+      }), ()=> this.props.fetchQuote())
+  }
+
+  getLoginButton () {
+    if (this.state.nextCount > 3) {
+      return <Button full onPress={this._login}><Text>login</Text></Button>
+    }
+    return null
   }
 
   render() {
@@ -40,9 +48,7 @@ class Home extends Component {
       </Wallpaper>
         <Footer>
           <FooterTab>
-            <Button full onPress={this._login}>
-              <Text>login</Text>
-            </Button>
+            {this.getLoginButton()}
             <Button>
             </Button>
             <Button onPress={this._next}>
@@ -54,19 +60,5 @@ class Home extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: 'black',
-  },
-  wallQuote: {
-    color: 'white',
-    fontSize: 23,
-    textAlign: 'center',
-    textShadowColor: 'black',
-    textShadowRadius: 4,
-  }
-});
-
 
 export default Home

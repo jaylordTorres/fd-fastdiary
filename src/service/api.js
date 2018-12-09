@@ -12,9 +12,11 @@ const create = (baseURL = url.picsum) => {
   })
 
   const getRandom = (w=200, h=400) => api.get(`${w}/${h}/?random`)
+  const getList = () => api.get(`list`)
 
   return {
-    getRandom
+    getRandom,
+    getList
   }
 }
 
@@ -39,6 +41,12 @@ export const util = {
   getRandomUri: (w=metrics.width, h=metrics.height) => {
     const randomString = Math.floor(Math.random() * 100)
      return `${url.picsum}${w}/${h}/?random&${randomString}`
+  },
+  createUriPicsum: (w=metrics.width, h=metrics.height, _id) => {
+     return `${url.picsum}${w}/${h}/?image&${_id}`
+  },
+  createUriPicsumGray: (w=metrics.width, h=metrics.height, _id) => {
+     return `${url.picsum}g/${w}/${h}/?image&${_id}`
   }
 }
 
