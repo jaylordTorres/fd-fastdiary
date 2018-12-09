@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import { View, StatusBar } from 'react-native'
 import AppNavigation from './../navigation/AppNavigation'
 
-// Styles
-import styles from './../../style/root/RootContainer.style'
+import styles from './style'
 
 class RootContainer extends Component {
   componentDidMount () {

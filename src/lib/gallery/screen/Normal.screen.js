@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux'
 import Swiper from './../container/Swiper.container'
 import { util } from './../../../service/api'
-// import QuoteActions from './../../../redux-saga/redux/quote.redux'
 
 export const NormalScreen = (props) => {
     const attributes = {

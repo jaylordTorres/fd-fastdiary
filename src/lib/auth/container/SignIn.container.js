@@ -3,7 +3,7 @@ import { Container, Form, Input, Item, Label, Button, Icon, Text } from 'native-
 import { util } from './../../../service/api'
 import { ACCESS_CODE } from './../../../constant'
 import { Wallpaper } from './../../../shared'
-import Loading from './../../../shared/Loading'
+import { ButtonLogin } from './../component'
 import styles from './../style'
 
 class SignIn extends Component {
@@ -35,28 +35,22 @@ class SignIn extends Component {
     this.setState({error: true})
   }
 
-  getSubmitButton = (loading) => {
-    if (loading) {
-      return <Loading />
-    }
-    return <Button full onPress={this._login} disabled={loading}><Text>login</Text></Button>
-  }
-
   render() {
     const { loading } = this.props
+    const { error, success, accessCode } = this.state
     return (
       <Container style={styles.container}>
-      <Wallpaper style={styles.wallpaper}>
+        <Wallpaper>
         <Form style={styles.form}>
-            <Item error={this.state.error} success={this.state.success}>
+            <Item error={error} success={success}>
             <Icon active name='lock' />
               <Input placeholder={'Access Code'}
                 onChangeText={this._onChangeAccessCode}
                 onSubmitEditing={this._login}
-                value={this.state.accessCode} />
+                value={accessCode} />
               <Icon active name='trash' onPress={this._onReset} button />
             </Item>
-            {this.getSubmitButton(loading)}
+            <ButtonLogin onPress={this._login} loading={loading} />
           </Form>
         </Wallpaper>
       </Container>

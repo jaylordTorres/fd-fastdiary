@@ -3,7 +3,7 @@ import { StyleSheet, View } from 'react-native'
 import { Button, Container, Header, Content, Title as NTitle, Card, CardItem, Body, Text, Icon, Right } from 'native-base';
 import { screenList } from './../AppNavigation'
 import { Title, Subtitle } from './../../../shared'
-import Wallpaper from './../../../shared/Wallpaper'
+import { ButtonInfo, Wallpaper } from './../../../shared'
 
 const homeMenuItem = [
   'Normal',
@@ -50,9 +50,7 @@ class MenuScreen extends PureComponent {
             <NTitle>MENU</NTitle>
           </Body>
           <Right>
-            <Button onPress={this._onInfo} tansparent>
-              <Icon name="information" />
-            </Button>
+            <ButtonInfo onPress={this._onInfo} />
           </Right>
         </Header>
         <Wallpaper>

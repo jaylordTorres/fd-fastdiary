@@ -4,7 +4,7 @@ import { metrics } from './../../style/global'
 
 export default StyleSheet.create({
   container: { backgroundColor: 'black' },
-  wallpaper: { alignContent: 'center', justifyContent: 'center' },
+  wallpaper: { alignContent: 'center', justifyContent: 'center', flex: 1 },
   form: { backgroundColor: 'white', },
   wallQuote: {
     color: 'white',
@@ -12,13 +12,5 @@ export default StyleSheet.create({
     textAlign: 'center',
     textShadowColor: 'black',
     textShadowRadius: 4,
-  },
-	img: {
-	  backgroundColor: 'black',
-	  flex: 1,
-	  resizeMode: 'stretch',
-	  alignContent: 'center',
-	  justifyContent: 'center',
-	  height: metrics.height
-	}
+  }
 })

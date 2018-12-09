@@ -44,7 +44,6 @@ class PicBox extends PureComponent {
   }
 
   _next () {
-    console.log(this.state.page)
     this.loadImage(this.state.page + 1)
   }
 
@@ -61,7 +60,7 @@ class PicBox extends PureComponent {
         <ImageBrowser images={list} />
         <Footer>
           <FooterTab>
-            <Button onPress={this._back}>
+            <Button onPres s={this._back}>
               <Icon name="arrow-back" />
             </Button>
             <Button>
