@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Body, Button, Container, Content, Footer, FooterTab, Header, Icon, Text, Title} from 'native-base'
+import { Body, Container, Content, Header, Title } from 'native-base'
 import { Author, ApiThank, Dependency } from './../component'
 
 class AppInfo extends Component {
@@ -12,9 +12,9 @@ class AppInfo extends Component {
 	        </Body>
 	      </Header>
     	  <Content>
-    	  <Author />
-    	  <ApiThank />
-    	  <Dependency />
+    	    <Author />
+    	    <ApiThank />
+    	    <Dependency />
     	  </Content>
     	</Container>
     )
