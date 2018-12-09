@@ -11,6 +11,10 @@ export const Subtitle = ({children, style, ...props}) => {
 	return <NSubtitle style={[styles.title, style]} {...props}>{children}</NSubtitle>
 }
 
+export { default as Loading } from './Loading'
+export { default as Wallpaper } from './Wallpaper'
+
+
 const styles = StyleSheet.create({
 	title: {
 		color: 'gray'

@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { View, Card, CardItem, Container, Content, Footer, Button, Icon, Text, Title, DeckSwiper } from 'native-base'
 import { util } from './../../../service/api'
+import { Wallpaper } from './../../../shared'
 import styles from './../style'
-import Wallpaper from './../../../shared/Wallpaper'
 
 class Swiper extends Component {
   render() {

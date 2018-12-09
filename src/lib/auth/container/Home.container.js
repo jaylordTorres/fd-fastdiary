@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Container, Footer, FooterTab, Button, Icon, Text, Title} from 'native-base'
 import { util } from './../../../service/api'
-import Wallpaper from './../component/Wallpaper'
+import { Wallpaper } from './../../../shared'
 import styles from './../style'
 
 class Home extends Component {
@@ -14,6 +14,7 @@ class Home extends Component {
     }
     this._login = this._login.bind(this)
     this._next = this._next.bind(this)
+    this._onInfo = this._onInfo.bind(this)
   }
 
   componentDidMount () {
@@ -39,6 +40,10 @@ class Home extends Component {
     return null
   }
 
+  _onInfo () {
+    this.props.navigation.navigate('AppInfo')
+  }
+
   render() {
     const { wallQuote } = this.props
     return (
@@ -49,7 +54,8 @@ class Home extends Component {
         <Footer>
           <FooterTab>
             {this.getLoginButton()}
-            <Button>
+            <Button onPress={this._onInfo} tansparent>
+              <Icon name="information" />
             </Button>
             <Button onPress={this._next}>
               <Icon name="arrow-forward" />

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Container, Form, Input, Item, Label, Button, Icon, Text } from 'native-base'
 import { util } from './../../../service/api'
 import { ACCESS_CODE } from './../../../constant'
-import Wallpaper from './../component/Wallpaper'
+import { Wallpaper } from './../../../shared'
 import Loading from './../../../shared/Loading'
 import styles from './../style'
 

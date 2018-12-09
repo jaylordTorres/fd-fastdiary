@@ -43,16 +43,19 @@ export const util = {
      return `${url.picsum}${w}/${h}/?random&${randomString}`
   },
   createUriPicsum: (w=metrics.width, h=metrics.height, _id) => {
-     return `${url.picsum}${w}/${h}/?image&${_id}`
+     return `${url.picsum}${w}/${h}/?image=${_id}`
   },
   createUriPicsumGray: (w=metrics.width, h=metrics.height, _id) => {
-     return `${url.picsum}g/${w}/${h}/?image&${_id}`
+     return `${url.picsum}g/${w}/${h}/?image=${_id}`
   },
   createUriPicsumBlur: (w=metrics.width, h=metrics.height, _id) => {
-     return `${url.picsum}${w}/${h}/?image&${_id}&blur`
+     return `${url.picsum}${w}/${h}/?image=${_id}&blur`
   },
   createUriPicsumGrayBlur: (w=metrics.width, h=metrics.height, _id) => {
-     return `${url.picsum}g/${w}/${h}/?image&${_id}&blur`
+     return `${url.picsum}g/${w}/${h}/?image=${_id}&blur`
+  },
+  createUriPicsumThumbnail: (w=metrics.halfWidth, h=metrics.halfHeight, _id) => {
+     return `${url.picsum}g/${w}/${h}/?image=${_id}&blur`
   }
 }
 

@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import { StyleSheet, View } from 'react-native'
-import { Container, Header, Content, Card, CardItem, Body, Text, Icon, Right } from 'native-base';
+import { Button, Container, Header, Content, Title as NTitle, Card, CardItem, Body, Text, Icon, Right } from 'native-base';
 import { screenList } from './../AppNavigation'
 import { Title, Subtitle } from './../../../shared'
 import Wallpaper from './../../../shared/Wallpaper'
@@ -14,8 +14,13 @@ const homeMenuItem = [
 ]
 
 class MenuScreen extends PureComponent {
+  constructor(props) {
+    super(props)
+
+    this._onInfo = this._onInfo.bind(this)
+  }
+
   _onPress(id) {
-    console.log(id)
     this.props.navigation.navigate(id)
   }
 
@@ -33,19 +38,31 @@ class MenuScreen extends PureComponent {
 		})
 	}
 
+  _onInfo () {
+    this.props.navigation.navigate('AppInfo')
+  }
+
   render() {
   	return (
 			<Container>
+        <Header>
+          <Body>
+            <NTitle>MENU</NTitle>
+          </Body>
+          <Right>
+            <Button onPress={this._onInfo} tansparent>
+              <Icon name="information" />
+            </Button>
+          </Right>
+        </Header>
         <Wallpaper>
+          <Content>
             {this.list()}
+          </Content>
         </Wallpaper>
       </Container>
     )
   }
 }
-
-const styles = StyleSheet.create({
-
-})
 
 export default MenuScreen

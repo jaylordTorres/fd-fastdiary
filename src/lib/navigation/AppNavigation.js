@@ -11,6 +11,10 @@ import Normal from './../gallery/screen/Normal.screen'
 import Gray from './../gallery/screen/Gray.screen'
 import Blur from './../gallery/screen/Blur.screen'
 import GrayBlur from './../gallery/screen/GrayBlur.screen'
+import PicBox from './../gallery/screen/PicBox.screen'
+
+// credit
+import AppInfo from './../credit/screen/AppInfo.screen'
 
 export const { screens, screenList } = screenData([
  	{
@@ -55,15 +59,21 @@ export const { screens, screenList } = screenData([
  	{
  		id: 'List',
  		title: 'Gallery List',
- 		note: 'list',
- 		component: SignIn,
+ 		note: 'thumbnail',
+ 		component: PicBox,
+ 	},
+ 	{
+ 		id: 'AppInfo',
+ 		title: 'Thanks',
+ 		note: 'credits to jay lord torres',
+ 		component: AppInfo,
  	}])
 
 const AppNavigator = createStackNavigator(
   screens,
   {
   	headerMode: 'none',
-    initialRouteName: "Home"
+    initialRouteName: 'Home', //'AppInfo', // 
   }
 )
 

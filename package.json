@@ -16,6 +16,7 @@
     "react-native-firebase": "^5.1.1",
     "react-native-gesture-handler": "^1.0.10",
     "react-native-image-progress": "^1.1.1",
+    "react-native-interactive-image-gallery": "^0.1.2",
     "react-native-progress": "^3.5.0",
     "react-navigation": "^3.0.6",
     "react-redux": "^6.0.0",
