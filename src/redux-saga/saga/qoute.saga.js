@@ -7,11 +7,11 @@ export function * fetchQuote (api, action) {
   const { param, cb = nullFunc } = action
   try {
     const randomQuote = yield call(api.getQuote)
-    console.log(randomQuote)
+    // console.log(randomQuote)
     const wallQuote = randomQuote.data[0] ? randomQuote.data[0]['content'] : ''
     yield put(QuoteRedux.mergeQuote({wallQuote: decodeHtml(cleanHtml(wallQuote))}))
 
   } catch (e) {
-    console.log(e)
+    // console.log(e)
   }
 }

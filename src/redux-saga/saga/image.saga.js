@@ -11,11 +11,9 @@ export function * fetchImageList (api, action) {
     yield put(ImageRedux.mergeImage({loading: true}))
     const req = yield call(api.getList)
     const imageList = getRandom(req.data, RequestConfig.MAX_IMAGE_COUNT)
-    console.log(imageList)
     yield put(ImageRedux.mergeImage({list: imageList, loading: false}))
     cb()
   } catch (e) {
-    console.log(e)
     yield put(ImageRedux.mergeImage({loading: false}))
   }
 }
